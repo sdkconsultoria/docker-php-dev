@@ -19,22 +19,22 @@ RUN add-apt-repository ppa:ondrej/php && \
             zip \
             curl \
             apache2 \
-            php7.4 \
+            php8.0 \
             libapache2-mod-php \
-            php7.4-mysql \
-            php7.4-curl \
-            php7.4-gd \
-            php7.4-imagick \
-            php7.4-cli \
-            php7.4-mbstring \
-            php7.4-zip \
-            php7.4-xml \
+            php8.0-mysql \
+            php8.0-curl \
+            php8.0-gd \
+            php8.0-imagick \
+            php8.0-cli \
+            php8.0-mbstring \
+            php8.0-zip \
+            php8.0-xml \
        --no-install-recommends && \
        apt-get clean && \
        rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Enable apache mods
-RUN a2enmod rewrite headers expires php7.4
+RUN a2enmod rewrite headers expires php8.0
 
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \

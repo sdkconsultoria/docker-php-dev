@@ -29,6 +29,7 @@ RUN add-apt-repository ppa:ondrej/php && \
             php8.0-mbstring \
             php8.0-zip \
             php8.0-xml \
+            php8.0-soap \
             php8.0-xdebug \
             php8.0-pcov \
        --no-install-recommends && \

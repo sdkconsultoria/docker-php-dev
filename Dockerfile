@@ -32,6 +32,7 @@ RUN add-apt-repository ppa:ondrej/php && \
             php8.0-soap \
             php8.0-xdebug \
             php8.0-pcov \
+            php8.0-redis \
        --no-install-recommends && \
        apt-get clean && \
        rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

@@ -56,6 +56,10 @@ RUN curl -LO https://deployer.org/deployer.phar
 RUN mv deployer.phar /usr/local/bin/dep
 RUN chmod +x /usr/local/bin/dep
 
+RUN apt install iputils-ping -y
+RUN apt install telnet -y
+RUN apt install vim -y
+
 COPY image-files/ /
 
 RUN rm ~/.ssh -rf

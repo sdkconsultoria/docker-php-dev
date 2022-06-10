@@ -51,6 +51,7 @@ RUN apt -y install nodejs
 RUN apt install iputils-ping -y
 RUN apt install telnet -y
 RUN apt install vim -y
+RUN apt install php8.1-sqlite3 -y
 
 COPY image-files/ /
 

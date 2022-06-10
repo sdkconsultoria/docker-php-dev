@@ -6,10 +6,7 @@ RUN  apt-get update && \
      apt-get -y install \
              software-properties-common
 
-RUN apt-get install rsync grsync  -y
-RUN apt-get install ssh  -y
 RUN apt-get install webp  -y
-RUN apt-get install mysql-client  -y
 RUN apt-get install unzip  -y
 
 # Install Apache and PHP
@@ -47,14 +44,9 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 # Install NodeJS
 RUN apt -y install dirmngr apt-transport-https lsb-release ca-certificates
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 
 RUN apt -y install nodejs
-
-# Install deployer
-RUN curl -LO https://deployer.org/deployer.phar
-RUN mv deployer.phar /usr/local/bin/dep
-RUN chmod +x /usr/local/bin/dep
 
 RUN apt install iputils-ping -y
 RUN apt install telnet -y
